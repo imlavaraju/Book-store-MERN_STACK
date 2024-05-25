@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:3300/books/allbooks")
+      .get("https://book-store-pi-murex.vercel.app/books/allbooks")
       .then((response) => {
         setBooks(response.data);
         console.log(books);
