@@ -18,7 +18,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3300/books/book/${id}`)
+      .get(`https://book-store-pi-murex.vercel.app/books/book/${id}`)
       .then((response) => {
         setauthor_name(response.data.author_name);
         setpublished_year(response.data.published_year);
@@ -42,7 +42,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:3300/books/update/book/${id}`, data)
+      .put(`https://book-store-pi-murex.vercel.app/books/update/book/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Edited successfully", { variant: "success" });
