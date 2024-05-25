@@ -23,7 +23,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post("http://localhost:3300/books/create/book", data)
+      .post("https://book-store-pi-murex.vercel.app/books/books/create/book", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Created successfully", { variant: "success" });
