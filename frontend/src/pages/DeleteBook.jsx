@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .post(`http://localhost:3300/books/delete/book/${id}`)
+      .post(`https://book-store-pi-murex.vercel.app/books/delete/book/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book Deleted successfully", { variant: "success" });
