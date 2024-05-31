@@ -65,4 +65,4 @@ Here are some key API endpoints used in the project:
   - `PUT /books/update/book/:id` - Update a book by ID
   - `POST /books/delete/book/:id` - Delete a book by ID
 ## Note
-The given Books data is from ChatGpt whether it is correct data or not ,i'm using data from my project work
+The given Books data is from ChatGpt whether it is correct data or not ,i'm using data for my project work
