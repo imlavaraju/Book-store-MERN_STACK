@@ -12,7 +12,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://book-store-pi-murex.vercel.app/books/book/${id}`)
+      .get(`http://localhost:3300/books/book/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
@@ -32,10 +32,6 @@ const ShowBook = () => {
       ) : (
         <div className="flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4">
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Id</span>
-            <span>{book._id}</span>
-          </div>
-          <div className="my-4">
             <span className="text-xl mr-4 text-gray-500">Title</span>
             <span>{book.bookname}</span>
           </div>
@@ -44,7 +40,7 @@ const ShowBook = () => {
             <span>{book.author_name}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Description</span>
+            <span className="text-xl mr-4 text-gray-500">Publish Year</span>
             <span>{book.description}</span>
           </div>
           <div className="my-4">
